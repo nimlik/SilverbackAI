@@ -7,8 +7,6 @@ The official landing page for Sora Labs, built with Next.js.
 First, run the development server:
 
 ```bash
-npm run dev
-# or
 yarn dev
 ```
 
