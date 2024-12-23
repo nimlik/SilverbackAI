@@ -8,7 +8,7 @@ export default function SoraLabsDefinition() {
   const lines = [
     "ソラ ラボズ",
     "sora labs",
-    "[so-rah labz] · proper noun",
+    "[sôr-ah labz] · proper noun",
     "1. where the sky is just the beginning.",
   ];
 
