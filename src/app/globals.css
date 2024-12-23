@@ -3,19 +3,26 @@
 @tailwind utilities;
 
 :root {
-  --background: #FFE5EC;
+  --background: #ffffff;
   --foreground: #1a1a1a;
 }
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   :root {
     --background: #1a1a1a;
-    --foreground: #FFE5EC;
+    --foreground: #ffffff;
   }
-}
+} */
 
 body {
   color: var(--foreground);
   background: var(--background);
   font-family: var(--font-geist-sans);
+}
+
+.home-background {
+  background-image: url('/bg.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }

@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function Navbar() {
   return (
-    <header className="fixed top-0 w-full bg-sora-bg/80 backdrop-blur-md z-50 border-b border-sora-secondary/20">
+    <header className="fixed top-0 w-full bg-sora-bg/50 backdrop-blur-md z-50 border-b border-sora-secondary/20">
       <nav className="max-w-7xl mx-auto px-4 h-14 flex items-center justify-between">
         <Link href="/" className="font-bold text-xl text-gray-900">
           Sora Labs
