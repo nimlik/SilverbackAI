@@ -17,7 +17,7 @@ export default function SoraDefinition({
   const [isComplete, setIsComplete] = useState(false);
 
   const lines = [
-    "そら",
+    "ソラ",
     "sora",
     "[so-rah] · noun",
     "1. sky, heaven, empty, or void",
