@@ -19,3 +19,11 @@ body {
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+.main-content {
+  min-height: calc(100vh - 8rem); /* Accounting for navbar and footer */
+  margin-top: 4rem; /* Height of navbar */
+  margin-bottom: 4rem; /* Height of footer */
+  position: relative;
+  overflow-y: auto;
+}
