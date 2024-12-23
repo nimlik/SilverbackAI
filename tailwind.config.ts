@@ -11,6 +11,13 @@ export default {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+        sora: {
+          bg: "#FFE5EC", // Lighter Pink (Background)
+          primary: "#89B4E5", // Deeper Sky Blue
+          secondary: "#FF9BB3", // Deeper Pink
+          accent: "#B8A3D1", // Deeper Lavender
+          light: "#BDE0FE", // Light Blue
+        },
       },
     },
   },
