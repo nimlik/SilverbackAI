@@ -17,6 +17,7 @@ export default {
           secondary: "#FF9BB3", // Deeper Pink
           accent: "#B8A3D1", // Deeper Lavender
           light: "#BDE0FE", // Light Blue
+          neutral: "#f0e9e9", // Light warm gray (for navbar/footer)
         },
       },
       fontFamily: {
