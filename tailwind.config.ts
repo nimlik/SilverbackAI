@@ -19,6 +19,9 @@ export default {
           light: "#BDE0FE", // Light Blue
         },
       },
+      fontFamily: {
+        "sf-pro": ["var(--font-sf-pro-display)"],
+      },
     },
   },
   plugins: [],
