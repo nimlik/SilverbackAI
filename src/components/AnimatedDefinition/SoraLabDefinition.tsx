@@ -6,7 +6,7 @@ import TypewriterText from "./TypewriterText";
 export default function SoraLabsDefinition() {
   const [currentLine, setCurrentLine] = useState(0);
   const lines = [
-    "そらラボ",
+    "ソラ ラボズ",
     "sora labs",
     "[so-rah labz] · proper noun",
     "1. where the sky is just the beginning.",
