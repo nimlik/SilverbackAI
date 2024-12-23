@@ -9,7 +9,13 @@ export default function Navbar() {
           href="/"
           className="font-bold text-lg text-gray-700 transition-colors flex items-center"
         >
-          <Image src="/logo.png" alt="Sora Labs Logo" width={32} height={32} />
+          <Image
+            src="/logo.png"
+            alt="Sora Labs Logo"
+            width={32}
+            height={32}
+            priority
+          />
           sora labs
         </Link>
 

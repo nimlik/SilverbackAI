@@ -24,4 +24,7 @@ export const sfProDisplay = localFont({
     },
   ],
   variable: "--font-sf-pro-display",
+  display: "swap",
+  preload: true,
+  fallback: ["system-ui", "arial"],
 });
