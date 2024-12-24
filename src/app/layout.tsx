@@ -41,7 +41,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="h-full">
       <body
-        className={`${sfProDisplay.variable} antialiased min-h-screen h-full home-background`}
+        className={`${sfProDisplay.variable} antialiased h-full home-background`}
       >
         <Navbar />
         <main className="h-full pt-14 pb-14">{children}</main>
