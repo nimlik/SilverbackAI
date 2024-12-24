@@ -43,7 +43,6 @@ export default function RootLayout({
       <body
         className={`${sfProDisplay.variable} antialiased h-full home-background`}
       >
-        {/* <Background /> */}
         <Navbar />
         <main className="h-full">{children}</main>
         <Footer />
