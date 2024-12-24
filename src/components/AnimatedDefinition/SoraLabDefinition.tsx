@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import TypewriterText from "../TypewriterText";
+import { AnimatePresence, motion } from "framer-motion";
 
 export default function SoraLabsDefinition() {
   const [currentLine, setCurrentLine] = useState(0);
@@ -40,7 +41,15 @@ export default function SoraLabsDefinition() {
           )}
           {index < currentLine && line}
           {index === 2 && currentLine > 2 && (
-            <div className="w-full border-t border-gray-400 my-4" />
+            <AnimatePresence>
+              <motion.div
+                initial={{ opacity: 0, scaleX: 0 }}
+                animate={{ opacity: 1, scaleX: 1 }}
+                exit={{ opacity: 0, scaleX: 0 }}
+                transition={{ duration: 0.3 }}
+                className="w-full border-t border-gray-400 my-4 origin-left"
+              />
+            </AnimatePresence>
           )}
         </div>
       ))}
