@@ -10,7 +10,7 @@ const nextConfig: NextConfig = {
     minimumCacheTTL: 60,
   },
   experimental: {
-    optimizeCss: false,
+    optimizeCss: true,
     optimizePackageImports: ["framer-motion"],
   },
 };
