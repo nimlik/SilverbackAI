@@ -3,7 +3,6 @@ import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { sfProDisplay } from "@/lib/fonts";
-import Background from "@/components/Background";
 
 export const metadata: Metadata = {
   title: "sora labs",
@@ -41,8 +40,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="h-full">
-      <body className={`${sfProDisplay.variable} antialiased h-full`}>
-        <Background />
+      <body
+        className={`${sfProDisplay.variable} antialiased h-full home-background`}
+      >
+        {/* <Background /> */}
         <Navbar />
         <main className="h-full">{children}</main>
         <Footer />

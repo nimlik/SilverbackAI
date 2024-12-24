@@ -4,11 +4,10 @@ export default function Background() {
   return (
     <div className="fixed inset-0 -z-10">
       <Image
-        src="/bg.png"
+        src="/bg.webp"
         alt="Background"
         fill
         priority
-        quality={75}
         className="object-cover"
         sizes="100vw"
       />
