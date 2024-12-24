@@ -5,13 +5,13 @@ export default function Footer() {
         <div className="text-gray-800 text-sm">© 2024 sora labs</div>
         <div className="flex gap-6 text-sm">
           <a
-            href="#"
+            href="/privacy"
             className="text-gray-700 hover:text-sora-primary transition-colors"
           >
             privacy
           </a>
           <a
-            href="#"
+            href="/terms"
             className="text-gray-700 hover:text-sora-secondary transition-colors"
           >
             terms

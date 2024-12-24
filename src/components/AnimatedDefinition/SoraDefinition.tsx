@@ -2,8 +2,8 @@
 
 import { motion, AnimatePresence } from "framer-motion";
 import { useEffect, useState } from "react";
-import TypewriterText from "./TypewriterText";
-import CursorBlinker from "./CursorBlinker";
+import TypewriterText from "../TypewriterText";
+import CursorBlinker from "../CursorBlinker";
 
 export default function SoraDefinition({
   isDeleting,
