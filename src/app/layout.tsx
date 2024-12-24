@@ -40,6 +40,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="h-full">
+      <head>
+        <link rel="preload" href="/bg.png" as="image" type="image/png" />
+      </head>
       <body
         className={`${sfProDisplay.variable} antialiased h-full home-background`}
       >
