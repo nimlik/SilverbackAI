@@ -8,7 +8,7 @@ export default function WhitepaperContent() {
   const content: string[] = [
     "Where the sky is just the beginning.",
     "That's our motto and it's something we truly believe in whenever we develop a product.",
-    "The world of AI and blockchain has already advanced so far yet there is still so much possibility left to be done. In a way, they're a great reflection of our motto and why we have decided to focus on them.",
+    "The world of AI and blockchain has already advanced so far, yet there are still so many possibilities left to be explored. In a way, they're a great reflection of our motto and why we have decided to focus on them.",
     "Nowadays, AI agents have truly unlocked the potential of what is possible on-chain and off-chain. Not only can they ingest context and interact with real people, but they can also perform autonomous actions as needed. The possibilities are truly endless.",
     "By leveraging Solana's high throughput, low fees, and especially its robust ecosystem, we can decentralize products and agents to foster a stronger sense of trust and security—while maintaining affordability and scale for real-world adoption.",
     "At Sora Labs, we're all about empowering developers. Our products are built around a frictionless developer experience in mind, so we together can drive breakthroughs in AI and crypto.",
