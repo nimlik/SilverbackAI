@@ -27,6 +27,12 @@ export default function Navbar() {
             whitepaper
           </Link>
           <Link
+            href="/docs"
+            className="text-gray-700 hover:text-sora-primary transition-colors"
+          >
+            docs
+          </Link>
+          <Link
             href="https://github.com/soralabs"
             target="_blank"
             className="text-gray-700 hover:text-sora-secondary transition-colors"
