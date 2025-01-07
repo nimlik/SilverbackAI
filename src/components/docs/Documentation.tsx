@@ -1,11 +1,11 @@
 export interface DocumentationProps {
   title: string;
-  description: string;
+  description?: string;
   children: React.ReactNode;
 }
 
 export interface DocumentationSectionProps {
-  title: string;
+  title?: string;
   description?: string;
   children: React.ReactNode;
 }

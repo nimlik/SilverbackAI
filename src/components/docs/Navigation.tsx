@@ -18,18 +18,15 @@ const navigation: NavItem[] = [
   {
     title: "sora",
     href: "/docs/sora",
-    items: [
-      { title: "purpose", href: "/docs/sora/purpose" },
-      { title: "why", href: "/docs/sora/why" },
-    ],
+    items: [{ title: "purpose", href: "/docs/sora/purpose" }],
   },
   {
     title: "projects",
     href: "/docs/projects",
     items: [
-      { title: "toolkit", href: "/docs/projects/toolkit" },
       { title: "zen", href: "/docs/projects/zen" },
       { title: "hana", href: "/docs/projects/hana" },
+      { title: "toolkit", href: "/docs/projects/toolkit" },
     ],
   },
 ];
