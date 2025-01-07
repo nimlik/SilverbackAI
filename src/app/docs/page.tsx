@@ -16,8 +16,8 @@ export default function Docs() {
           agent using our Zen framework that&apos;s currently active on Twitter.
         </p>
         <p>
-          We&apos;re also working on a toolkit for building AI agents in Solana,
-          which we are and will be actively working on.
+          We&apos;re also developing a toolkit for building AI related tools in
+          Solana, which we are and will be actively working on.
         </p>
       </Documentation>
     </div>
