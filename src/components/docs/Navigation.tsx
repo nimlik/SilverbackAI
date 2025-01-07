@@ -30,6 +30,7 @@ const navigation: NavItem[] = [
       { title: "zen", href: "/docs/projects/zen" },
       { title: "hana", href: "/docs/projects/hana" },
       { title: "toolkit", href: "/docs/projects/toolkit" },
+      { title: "solana-toolkit", href: "/docs/projects/solana-toolkit" },
     ],
   },
 ];

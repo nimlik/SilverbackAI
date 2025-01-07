@@ -42,6 +42,16 @@ export default function Zen() {
               friend would.
             </li>
           </ul>
+          <p className="mt-4">
+            <a
+              href="https://github.com/soralabs/zen"
+              className="text-sora-accent hover:text-sora-secondary underline"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              View on GitHub
+            </a>
+          </p>
         </DocumentationSection>
       </Documentation>
     </div>

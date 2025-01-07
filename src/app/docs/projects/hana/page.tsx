@@ -15,6 +15,16 @@ export default function Hana() {
             create intelligent, adaptable agents, demonstrating its capabilities
             in a real-world application.
           </p>
+          <p className="mt-4">
+            <a
+              href="https://github.com/soralabs/hana"
+              className="text-sora-accent hover:text-sora-secondary underline"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              View on GitHub
+            </a>
+          </p>
         </DocumentationSection>
       </Documentation>
     </div>

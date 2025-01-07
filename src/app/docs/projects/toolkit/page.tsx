@@ -51,6 +51,16 @@ export default function Toolkit() {
               take input and give output is straightforward with JSON schemas.
             </li>
           </ul>
+          <p className="mt-4">
+            <a
+              href="https://github.com/soralabs/toolkit"
+              className="text-sora-accent hover:text-sora-secondary underline"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              View on GitHub
+            </a>
+          </p>
         </DocumentationSection>
       </Documentation>
     </div>
