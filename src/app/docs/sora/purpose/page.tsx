@@ -16,8 +16,7 @@ export default function Purpose() {
             create, launch, and scale smart systems in real-world scenarios. We
             believe that innovation shouldn&apos;t be locked behind complexity,
             so we focus on making our solutions easy to use, highly flexible,
-            and fully customizable to meet a wide range of needs. meet a wide
-            range of needs.
+            and fully customizable to meet a wide range of needs.
           </p>
           <p>
             Our approach is grounded in bridging the gap between advanced AI
