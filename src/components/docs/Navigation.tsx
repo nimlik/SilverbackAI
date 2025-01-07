@@ -7,6 +7,7 @@ import { useState, useEffect } from "react";
 interface NavItem {
   title: string;
   href: string;
+  isCategory?: boolean;
   items?: NavItem[];
 }
 
@@ -18,11 +19,13 @@ const navigation: NavItem[] = [
   {
     title: "sora",
     href: "/docs/sora",
+    isCategory: true,
     items: [{ title: "purpose", href: "/docs/sora/purpose" }],
   },
   {
     title: "projects",
     href: "/docs/projects",
+    isCategory: true,
     items: [
       { title: "zen", href: "/docs/projects/zen" },
       { title: "hana", href: "/docs/projects/hana" },
@@ -66,19 +69,29 @@ function NavLink({
 
   return (
     <div>
-      <Link
-        href={item.href}
-        onClick={onNavigate}
-        className={`${
-          isActive
-            ? "text-sora-secondary font-medium"
-            : "text-gray-700 hover:text-sora-secondary"
-        } ${
-          isNested ? "text-xs pl-4" : "text-sm"
-        } transition-colors duration-200 block py-2`}
-      >
-        {item.title}
-      </Link>
+      {item.isCategory ? (
+        <span
+          className={`${
+            isNested ? "text-xs pl-4" : "text-sm"
+          } text-gray-700 block py-2`}
+        >
+          {item.title}
+        </span>
+      ) : (
+        <Link
+          href={item.href}
+          onClick={onNavigate}
+          className={`${
+            isActive
+              ? "text-sora-secondary font-medium"
+              : "text-gray-700 hover:text-sora-accent"
+          } ${
+            isNested ? "text-xs pl-4" : "text-sm"
+          } transition-colors duration-200 block py-2`}
+        >
+          {item.title}
+        </Link>
+      )}
       {item.items && (
         <div className="ml-2 border-l border-x-sora-accent my-1">
           {item.items.map((subItem) => (
