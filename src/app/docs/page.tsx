@@ -1,4 +1,7 @@
-import { Documentation } from "@/components/docs/Documentation";
+import {
+  Documentation,
+  DocumentationSection,
+} from "@/components/docs/Documentation";
 
 export default function Docs() {
   return (
@@ -19,6 +22,25 @@ export default function Docs() {
           We&apos;re also developing a toolkit for building AI related tools in
           Solana, which we are and will be actively working on.
         </p>
+        <DocumentationSection title="Open Source">
+          <p>
+            As discussed in our whitepaper, we truly believe in
+            decentralization, so we will be open sourcing all of our projects,
+            not just our products.
+          </p>
+          <p>
+            This means that even this website you&apos;re reading is{" "}
+            <a
+              href="https://github.com/sora-labs/sora-website"
+              className="text-sora-accent hover:text-sora-primary/80 underline"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              open sourced
+            </a>
+            .
+          </p>
+        </DocumentationSection>
       </Documentation>
     </div>
   );
