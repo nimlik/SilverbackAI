@@ -26,7 +26,8 @@ export default function Docs() {
           <p>
             As discussed in our whitepaper, we truly believe in
             decentralization, so we will be open sourcing all of our projects,
-            not just our products.
+            not just our products. We believe in creating everything ourselves
+            and not relying on third parties.
           </p>
           <p>
             This means that even this website you&apos;re reading is{" "}
