@@ -23,7 +23,8 @@ const roadmapData: RoadmapItem[] = [
   {
     id: "hana-1",
     title: "Hana Launch",
-    description: "Public launch of Hana, our AI-powered Twitter agent",
+    description:
+      "Launch of Hana, our AI Twitter agent powered by Zen and Toolkit",
     quarter: "Q1",
     year: 2024,
     status: "in-progress",
@@ -49,7 +50,7 @@ const roadmapData: RoadmapItem[] = [
 
 const statusColors = {
   completed: "bg-sora-secondary",
-  "in-progress": "bg-sora-bg",
+  "in-progress": "bg-sora-light",
   planned: "bg-gray-400",
 };
 
