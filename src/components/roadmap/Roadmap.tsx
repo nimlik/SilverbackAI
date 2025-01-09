@@ -37,7 +37,7 @@ const roadmapData: RoadmapItem[] = [
     status: "planned",
   },
   {
-    id: "zen-2",
+    id: "consumer-product-1",
     title: "Consumer Product Release",
     description:
       "Consumer facing product release; product will be voted on by the community.",
