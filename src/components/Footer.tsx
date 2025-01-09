@@ -18,6 +18,7 @@ export default function Footer() {
           </a>
           <a
             href="https://discord.gg/soralabs"
+            target="_blank"
             className="text-gray-700 hover:text-sora-secondary transition-colors"
           >
             discord
