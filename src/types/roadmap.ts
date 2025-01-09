@@ -1,4 +1,4 @@
-export type RoadmapQuarter = "Q1" | "Q2" | "Q3" | "Q4";
+export type RoadmapQuarter = "Q1" | "Q2" | "Q3" | "Q4" | "TBA";
 export type RoadmapStatus = "completed" | "in-progress" | "planned";
 
 export interface RoadmapItem {

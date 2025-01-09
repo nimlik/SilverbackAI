@@ -7,8 +7,8 @@ export default function RoadmapPage() {
         <div className="bg-sora-neutral/95 backdrop-blur-md rounded-lg p-8">
           <h1 className="text-xl font-bold mb-2">Roadmap</h1>
           <p className="text-sm text-gray-600 mb-8">
-            All completed projects are actively maintained and regularly
-            updated.
+            This roadmap shows our current plans, but we&apos;re just getting
+            started. All completed features are actively maintained and updated.
           </p>
           <Roadmap />
         </div>
