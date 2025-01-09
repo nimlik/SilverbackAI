@@ -16,6 +16,11 @@ export default function Hana() {
             in a real-world application.
           </p>
           <p className="mt-4">
+            Hana will also leverage our Toolkit to enhance its capabilities,
+            allowing for more sophisticated interactions and demonstrating the
+            power of our integrated solutions.
+          </p>
+          <p className="mt-4">
             <a
               href="https://github.com/soralabs/hana"
               className="text-sora-accent hover:text-sora-secondary underline"

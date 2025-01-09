@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import TypewriterText from "./TypewriterText";
+import TypewriterText from "../TypewriterText";
 
 export default function WhitepaperContent() {
   const [currentParagraph, setCurrentParagraph] = useState(0);
