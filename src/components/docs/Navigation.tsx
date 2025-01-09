@@ -1,17 +1,11 @@
 "use client";
 
+import { DocsNavItem } from "@/types/docs";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState, useEffect } from "react";
 
-interface NavItem {
-  title: string;
-  href: string;
-  isCategory?: boolean;
-  items?: NavItem[];
-}
-
-const navigation: NavItem[] = [
+const navigation: DocsNavItem[] = [
   {
     title: "overview",
     href: "/docs",
@@ -35,7 +29,10 @@ const navigation: NavItem[] = [
   },
 ];
 
-function getNavigationPath(pathname: string, navigation: NavItem[]): string[] {
+function getNavigationPath(
+  pathname: string,
+  navigation: DocsNavItem[]
+): string[] {
   const path = ["documentation"];
 
   const matchingItem = navigation.find((item) => item.href === pathname);
@@ -61,7 +58,7 @@ function NavLink({
   isNested = false,
   onNavigate,
 }: {
-  item: NavItem;
+  item: DocsNavItem;
   isNested?: boolean;
   onNavigate?: () => void;
 }) {
@@ -134,7 +131,7 @@ export default function Navigation() {
 
   return (
     <>
-      <div className="lg:hidden flex items-center gap-4">
+      <div className="lg:hidden flex items-center gap-4 max-w-full">
         <button
           id="nav-toggle-button"
           onClick={() => setIsOpen(!isOpen)}

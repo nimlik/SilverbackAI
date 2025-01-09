@@ -1,4 +1,4 @@
-import WhitepaperContent from "@/components/WhitepaperContent";
+import WhitepaperContent from "@/components/whitepaper/Content";
 
 export default function Whitepaper() {
   return (

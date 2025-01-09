@@ -1,4 +1,4 @@
-import AnimatedDefinition from "@/components/AnimatedDefinition";
+import AnimatedDefinition from "@/components/home";
 
 export default function Home() {
   return (

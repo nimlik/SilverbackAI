@@ -7,6 +7,7 @@ import { useState, useEffect } from "react";
 const navLinks = [
   { href: "/whitepaper", label: "whitepaper" },
   { href: "/docs", label: "docs" },
+  { href: "/roadmap", label: "roadmap" },
   { href: "https://github.com/soralabs", label: "github", external: true },
 ];
 
