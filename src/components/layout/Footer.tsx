@@ -17,6 +17,13 @@ export default function Footer() {
             terms
           </a>
           <a
+            href="https://x.com/labs_sora"
+            target="_blank"
+            className="text-gray-700 hover:text-sora-secondary transition-colors"
+          >
+            x
+          </a>
+          <a
             href="https://discord.gg/soralabs"
             target="_blank"
             className="text-gray-700 hover:text-sora-secondary transition-colors"
