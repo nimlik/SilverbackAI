@@ -7,7 +7,7 @@ const roadmapData: RoadmapItem[] = [
   {
     id: "zen-1",
     title: "Zen Framework",
-    description: "Initial release of the Zen Framework",
+    description: "Initial release of the Zen Framework.",
     quarter: "Q1",
     year: 2024,
     status: "completed",
@@ -15,7 +15,7 @@ const roadmapData: RoadmapItem[] = [
   {
     id: "toolkit-1",
     title: "Toolkit",
-    description: "Release of the Toolkit framework",
+    description: "Release of the Toolkit framework.",
     quarter: "Q1",
     year: 2024,
     status: "completed",
@@ -24,7 +24,7 @@ const roadmapData: RoadmapItem[] = [
     id: "hana-1",
     title: "Hana Launch",
     description:
-      "Launch of Hana, our AI Twitter agent powered by Zen and Toolkit",
+      "Launch of Hana, our AI Twitter agent powered by Zen and Toolkit.",
     quarter: "Q1",
     year: 2024,
     status: "in-progress",
@@ -32,7 +32,7 @@ const roadmapData: RoadmapItem[] = [
   {
     id: "solana-toolkit-1",
     title: "Solana Toolkit Release",
-    description: "Full release of Solana-specific AI tools and integrations",
+    description: "Full release of Solana-specific AI tools and integrations.",
     quarter: "Q1",
     year: 2024,
     status: "planned",
