@@ -21,6 +21,14 @@ const roadmapData: RoadmapItem[] = [
     status: "completed",
   },
   {
+    id: "solana-toolkit-1",
+    title: "Solana Toolkit Release",
+    description: "Full release of Solana-specific AI tools and integrations.",
+    quarter: "Q1",
+    year: 2024,
+    status: "in-progress",
+  },
+  {
     id: "hana-1",
     title: "Hana Launch",
     description:
@@ -28,14 +36,6 @@ const roadmapData: RoadmapItem[] = [
     quarter: "Q1",
     year: 2024,
     status: "in-progress",
-  },
-  {
-    id: "solana-toolkit-1",
-    title: "Solana Toolkit Release",
-    description: "Full release of Solana-specific AI tools and integrations.",
-    quarter: "Q1",
-    year: 2024,
-    status: "planned",
   },
   {
     id: "consumer-product-1",
