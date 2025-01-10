@@ -17,7 +17,7 @@ const roadmapData: RoadmapItem[] = [
     title: "Toolkit",
     description: "Release of the Toolkit framework.",
     quarter: "Q1",
-    year: 2024,
+    year: 2025,
     status: "completed",
   },
   {
@@ -25,7 +25,7 @@ const roadmapData: RoadmapItem[] = [
     title: "Solana Toolkit Release",
     description: "Full release of Solana-specific AI tools and integrations.",
     quarter: "Q1",
-    year: 2024,
+    year: 2025,
     status: "in-progress",
   },
   {
@@ -34,7 +34,7 @@ const roadmapData: RoadmapItem[] = [
     description:
       "Launch of Hana, our AI Twitter agent powered by Zen and Toolkit.",
     quarter: "Q1",
-    year: 2024,
+    year: 2025,
     status: "in-progress",
   },
   {
@@ -43,7 +43,7 @@ const roadmapData: RoadmapItem[] = [
     description:
       "Consumer facing product release; product will be voted on by the community.",
     quarter: "Q2",
-    year: 2024,
+    year: 2025,
     status: "planned",
   },
 ];
