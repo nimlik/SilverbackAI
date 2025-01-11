@@ -1,5 +1,9 @@
 # Sora Labs Website
 
+<div align="center">
+  <img src="./img/banner_sora.png" alt="Sora Banner" width="100%" />
+</div>
+
 The official landing page for Sora Labs, built with Next.js.
 
 ## Getting Started
