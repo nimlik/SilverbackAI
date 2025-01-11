@@ -9,7 +9,7 @@ const roadmapData: RoadmapItem[] = [
     title: "Zen Framework",
     description: "Initial release of the Zen Framework.",
     quarter: "Q1",
-    year: 2024,
+    year: 2025,
     status: "completed",
   },
   {
