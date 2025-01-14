@@ -16,5 +16,5 @@ export default function RoadmapLayout({
 }: {
   children: React.ReactNode;
 }) {
-  return children;
+  return <div className="pt-14 pb-14">{children}</div>;
 }

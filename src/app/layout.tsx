@@ -42,7 +42,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${sfProDisplay.variable} antialiased home-background`}>
         <Navbar />
-        <main className="pt-14 pb-14">{children}</main>
+        <main>{children}</main>
         <Footer />
       </body>
     </html>
