@@ -11,6 +11,7 @@ export default function SoraLabsDefinition() {
     "sora labs",
     "[sôr-ah labz] · proper noun",
     "1. where the sky is just the beginning.",
+    "2. 89nnWMkWeF9LSJvAWcN2JFQfeWdDk6diKEckeToEU1hE",
   ];
 
   const handleLineComplete = () => {
