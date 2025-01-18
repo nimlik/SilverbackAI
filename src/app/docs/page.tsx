@@ -32,7 +32,7 @@ export default function Docs() {
           <p>
             This means that even this website you&apos;re reading is{" "}
             <a
-              href="https://github.com/sora-labs/sora-website"
+              href="https://github.com/soralabs/sora-website"
               className="text-sora-accent hover:text-sora-primary/80 underline"
               target="_blank"
               rel="noopener noreferrer"
