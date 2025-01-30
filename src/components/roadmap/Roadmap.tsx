@@ -26,7 +26,7 @@ const roadmapData: RoadmapItem[] = [
     description: "Full release of Solana-specific AI tools and integrations.",
     quarter: "Q1",
     year: 2025,
-    status: "in-progress",
+    status: "completed",
   },
   {
     id: "hana-1",
