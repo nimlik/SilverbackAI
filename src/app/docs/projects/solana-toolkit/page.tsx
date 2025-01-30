@@ -20,7 +20,7 @@ export default function Toolkit() {
           <ul className="list-disc pl-6 mt-2 space-y-3">
             <li>
               <strong>Solana Integration:</strong> Built-in support for
-              interacting with Solana programs and accounts
+              interacting with Solana
             </li>
             <li>
               <strong>AI Tools for Blockchain:</strong> Specialized tools for
@@ -31,10 +31,6 @@ export default function Toolkit() {
               common Solana program interactions
             </li>
           </ul>
-          <p className="mb-4">
-            Coming soon! The Solana Toolkit is currently under active
-            development.
-          </p>
           <p>
             <a
               href="https://github.com/soralabs/solana-toolkit"
