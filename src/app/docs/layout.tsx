@@ -28,7 +28,7 @@ export default function DocsLayout({
               </div>
             </div>
             <div className="flex-1">
-              <div className="bg-sora-neutral/95 backdrop-blur-md rounded-lg p-8 max-w-3xl">
+              <div className="bg-sora-neutral/75 backdrop-blur-md rounded-lg p-8 max-w-3xl">
                 {children}
               </div>
             </div>

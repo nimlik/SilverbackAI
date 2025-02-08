@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "sora labs - privacy policy",
+  title: "silverback ai - privacy policy",
   description:
     "read the sora labs privacy policy to learn about how we handle your data.",
   openGraph: {

@@ -4,7 +4,7 @@ export default function Terms() {
   return (
     <div className="flex min-h-full items-center justify-center py-12">
       <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="bg-sora-neutral/95 backdrop-blur-md rounded-lg p-8">
+        <div className="bg-sora-neutral/70 backdrop-blur-md rounded-lg p-8">
           <h1 className="text-xl font-bold mb-8">Terms of Service</h1>
 
           <div className="space-y-6 text-gray-700">
@@ -31,7 +31,7 @@ export default function Terms() {
               <p className="text-sm">You agree not to:</p>
               <ul className="list-disc ml-6 mt-2 text-sm">
                 <li>Use our services for any unlawful purpose</li>
-                <li>Attempt to gain unauthorized access to our systems</li>
+                <li>Attempt to gain unauthorised access to our systems</li>
                 <li>Interfere with or disrupt our services</li>
               </ul>
             </section>

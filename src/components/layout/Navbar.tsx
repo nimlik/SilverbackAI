@@ -1,14 +1,18 @@
 "use client";
 
 import Link from "next/link";
-import Image from "next/image";
 import { useState, useEffect } from "react";
 
-const navLinks = [
-  { href: "/whitepaper", label: "whitepaper" },
-  { href: "/docs", label: "docs" },
+type NavLink = {
+  href: string;
+  label: string;
+  external?: boolean;
+};
+
+const navLinks: NavLink[] = [
+  { href: "/whitepaper", label: "litepaper" },
   { href: "/roadmap", label: "roadmap" },
-  { href: "https://github.com/soralabs", label: "github", external: true },
+  // { href: "https://github.com/nimlik", label: "github", external: true },
 ];
 
 export default function Navbar() {
@@ -33,20 +37,14 @@ export default function Navbar() {
   }, [isMenuOpen]);
 
   return (
-    <header className="fixed top-0 w-full bg-sora-neutral/95 backdrop-blur-md z-50 border-b border-sora-secondary/20">
-      <nav className="max-w-7xl mx-auto px-4 h-14 flex items-center justify-between">
+<header className="fixed top-0 w-full backdrop-blur-md z-50 border-b border-sora-secondary/20 bg-transparent">
+<nav className="max-w-7xl mx-auto px-4 h-14 flex items-center justify-between">
         <Link
           href="/"
-          className="font-bold text-lg text-gray-700 transition-colors flex items-center"
+          className="font-bold text-lg text-white transition-colors flex items-center"
         >
-          <Image
-            src="/logo.png"
-            alt="Sora Labs Logo"
-            width={32}
-            height={32}
-            priority
-          />
-          sora labs
+          
+          silverback ai 
         </Link>
 
         <div className="hidden md:flex gap-8 text-sm">
@@ -55,7 +53,7 @@ export default function Navbar() {
               key={link.href}
               href={link.href}
               target={link.external ? "_blank" : undefined}
-              className="text-gray-700 hover:text-sora-primary transition-colors"
+              className="text-white hover:text-sora-primary transition-colors"
             >
               {link.label}
             </Link>
@@ -68,7 +66,7 @@ export default function Navbar() {
           className="md:hidden p-2 rounded-lg border-sora-secondary/20"
         >
           <svg
-            className="w-6 h-6 text-gray-700"
+            className="w-6 h-6 text-white"
             fill="none"
             stroke="currentColor"
             viewBox="0 0 24 24"

@@ -4,7 +4,7 @@ export default function Background() {
   return (
     <div className="fixed inset-0 -z-10">
       <Image
-        src="/jungle.png"
+        src="/bg.png"
         alt="Background"
         fill
         priority

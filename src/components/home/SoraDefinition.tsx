@@ -17,10 +17,9 @@ export default function SoraDefinition({
   const [isComplete, setIsComplete] = useState(false);
 
   const lines = [
-    "ソラ",
-    "sora",
-    "[so-rah] · noun",
-    "1. sky, heaven, empty, or void",
+    "silverback",
+    "[sɪl.vɚˌbæk] · noun",
+    "1. a mature male mountain gorilla, distinguished by an area of white or silvery hair across the back and acting as the dominant member of its social group",
   ];
 
   useEffect(() => {
@@ -29,7 +28,7 @@ export default function SoraDefinition({
       setCurrentLine(lines.length - 1);
       setIsComplete(false);
     }
-  }, [isDeleting]);
+  }, [isDeleting, lines]);
 
   useEffect(() => {
     if (isComplete && displayedLines.length === 0) {
@@ -80,7 +79,7 @@ export default function SoraDefinition({
                 text={line}
                 isDeleting={isDeleting}
                 onComplete={handleLineComplete}
-                typingDuration={0.5}
+                typingDuration={0.75}
               />
             )}
 
@@ -100,7 +99,7 @@ export default function SoraDefinition({
                     initial={{ opacity: 0, scaleX: 0 }}
                     animate={{ opacity: 1, scaleX: 1 }}
                     exit={{ opacity: 0, scaleX: 0 }}
-                    transition={{ duration: 0.3 }}
+                    transition={{ duration: 0.5 }}
                     className="w-full border-t border-gray-400 my-4 origin-left"
                   />
                 )}
