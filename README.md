@@ -1,9 +1,5 @@
 # Silverback AI Website
 
-<div align="center">
-  <img src="./img/sora_readme_banner.png" alt="Sora Banner" width="100%" />
-</div>
-
 The official landing page for Silverback AI, built with Next.js.
 
 ## Getting Started
