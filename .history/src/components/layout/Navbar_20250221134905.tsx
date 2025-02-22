@@ -10,7 +10,7 @@ type NavLink = {
 };
 
 const navLinks: NavLink[] = [
-  { href: "/litepaper", label: "litepaper" },
+  { href: "/whitepaper", label: "litepaper" },
   { href: "/roadmap", label: "roadmap" },
   // { href: "https://github.com/nimlik", label: "github", external: true },
 ];

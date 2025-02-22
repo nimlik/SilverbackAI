@@ -1,0 +1,6 @@
+.home-background {
+    background-image: url('/bg.png'); /* Path to public/bg.png */
+    background-size: cover;
+    background-position: center;
+    /* Add other original styles here */
+  }

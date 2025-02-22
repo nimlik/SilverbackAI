@@ -1,5 +1,5 @@
 import { motion, useMotionValue, useTransform, animate } from "framer-motion";
-import { useRef, useEffect } from "react";
+import { useEffect } from "react";
 import CursorBlinker from "./CursorBlinker";
 
 export default function TypewriterText({
@@ -17,19 +17,18 @@ export default function TypewriterText({
 }) {
   const count = useMotionValue(0);
   const rounded = useTransform(count, (latest) => Math.round(latest));
-  const isMounted = useRef(true);
   const displayText = useTransform(rounded, (latest) =>
     isDeleting ? text.slice(0, text.length - latest) : text.slice(0, latest)
   );
 
   useEffect(() => {
     const controls = animate(count, text.length, {
-      onComplete: () => {
-        if (isMounted.current && onComplete) {
-          onComplete();
-        }
-    },
-  });
+      type: "tween",
+      duration: typingDuration,
+      delay: isDeleting ? 0 : startDelay,
+      ease: "easeInOut",
+      onComplete,
+    });
 
     return controls.stop;
   }, [text, startDelay, isDeleting, onComplete, typingDuration, count]);

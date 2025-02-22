@@ -24,7 +24,7 @@ export default function Docs() {
         </p>
         <DocumentationSection title="Open Source">
           <p>
-            As discussed in our Litepaper, we truly believe in
+            As discussed in our whitepaper, we truly believe in
             decentralization, so we will be open sourcing all of our projects,
             not just our products. We believe in creating everything ourselves
             and not relying on third parties.

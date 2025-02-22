@@ -82,7 +82,7 @@ function renderLine(line: string, key: number) {
   );
 }
 
-export default function WhitepaperContent() {
+export default function LitepaperContent() {
   const [currentLine, setCurrentLine] = useState(0);
   const [completedLines, setCompletedLines] = useState<string[]>([]);
 
@@ -149,7 +149,7 @@ export default function WhitepaperContent() {
     "-- Scalability (throughput, interoperability, transaction costs)",
     "",
     "_ Idea LLM:",
-    "-- Whitepaper",
+    "-- Litepaper",
     "-- Website",
     "-- Documentation",
     "-- Team & Roadmap",

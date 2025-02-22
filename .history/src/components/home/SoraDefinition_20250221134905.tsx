@@ -1,38 +1,32 @@
 "use client";
 
 import { motion, AnimatePresence } from "framer-motion";
-import { useEffect, useState, useMemo, useRef } from "react";
+import { useEffect, useState } from "react";
 import TypewriterText from "../TypewriterText";
 import CursorBlinker from "../CursorBlinker";
 
 export default function SoraDefinition({
   isDeleting,
   onComplete,
-}: 
-{
+}: {
   isDeleting: boolean;
   onComplete: () => void;
 }) {
   const [currentLine, setCurrentLine] = useState(0);
   const [displayedLines, setDisplayedLines] = useState<string[]>([]);
   const [isComplete, setIsComplete] = useState(false);
-  const initialRender = useRef(true); 
 
-  const lines = useMemo(() => [
+  const lines = [
     "silverback",
     "[sɪl.vɚˌbæk] · noun",
     "1. a mature male mountain gorilla, distinguished by an area of white or silvery hair across the back and acting as the dominant member of its social group",
-  ], []);
+  ];
 
   useEffect(() => {
     if (isDeleting) {
-      // Only run this logic once when isDeleting becomes true
-      if (initialRender.current || displayedLines.length !== lines.length) {
-        setDisplayedLines(lines);
-        setCurrentLine(lines.length - 1);
-        setIsComplete(false);
-        initialRender.current = false;
-      }
+      setDisplayedLines(lines);
+      setCurrentLine(lines.length - 1);
+      setIsComplete(false);
     }
   }, [isDeleting, lines]);
 

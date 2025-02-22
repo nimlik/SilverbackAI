@@ -22,7 +22,7 @@ export default function SoraDefinition({
     "silverback",
     "[sɪl.vɚˌbæk] · noun",
     "1. a mature male mountain gorilla, distinguished by an area of white or silvery hair across the back and acting as the dominant member of its social group",
-  ], []);
+  ];
 
   useEffect(() => {
     if (isDeleting) {
