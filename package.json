@@ -1,12 +1,15 @@
 {
-  "name": "sora-website",
+  "name": "silverback-ai",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://nimlik.github.io/SilverbackAI/",
+
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "deploy": "gh-pages -d build"
   },
   "dependencies": {
     "critters": "^0.0.25",
