@@ -8,7 +8,7 @@ import CursorBlinker from "../CursorBlinker";
 function BackgroundLoader({ onLoaded }: { onLoaded: () => void }) {
   useEffect(() => {
     const img = new Image();
-    img.src = "/bg.png"; 
+    img.src = "/bg.png";
     img.onload = onLoaded;
     img.onerror = onLoaded;
   }, [onLoaded]);
@@ -38,12 +38,12 @@ export default function SoraDefinition({
   );
 
   useEffect(() => {
-    if (isDeleting) {
+    if (isDeleting && backgroundLoaded) {
       setDisplayedLines(lines);
       setCurrentLine(lines.length - 1);
       setIsComplete(false);
     }
-  }, [isDeleting, lines]);
+  }, [isDeleting, lines, backgroundLoaded]); // Add backgroundLoaded as dependency
 
   useEffect(() => {
     if (isComplete && displayedLines.length === 0) {
@@ -74,64 +74,59 @@ export default function SoraDefinition({
   return (
     <div className="space-y-2">
       <BackgroundLoader onLoaded={() => setBackgroundLoaded(true)} />
-      
-      {!backgroundLoaded ? (
-        // Show loading indicator while background loads
-        <div className="text-gray-500">Loading...</div>
-      ) : (
-        lines.map((line, index) => {
-          const isPlainText =
-            displayedLines.includes(line) &&
-            (!isDeleting || index !== currentLine);
 
-          const isTypingOrDeleting = index === currentLine && !isComplete;
+      {backgroundLoaded && lines.map((line, index) => {
+        const isPlainText =
+          displayedLines.includes(line) &&
+          (!isDeleting || index !== currentLine);
 
-          return (
-            <div
-              key={line}
-              className={
-                index === 0 || index === 1
-                  ? "text-2xl font-medium"
-                  : index === 2
-                  ? "text-sm text-gray-700"
-                  : "text-sm text-gray-600"
-              }
-            >
-              {isTypingOrDeleting && (
-                <TypewriterText
-                  text={line}
-                  isDeleting={isDeleting}
-                  onComplete={handleLineComplete}
-                  typingDuration={0.75}
-                />
-              )}
+        const isTypingOrDeleting = index === currentLine && !isComplete;
 
-              {isPlainText && (
-                <span>
-                  {line}
-                  {index === lines.length - 1 && isComplete && !isDeleting && (
-                    <CursorBlinker />
-                  )}
-                </span>
-              )}
+        return (
+          <div
+            key={line}
+            className={
+              index === 0 || index === 1
+                ? "text-2xl font-medium"
+                : index === 2
+                ? "text-sm text-gray-700"
+                : "text-sm text-gray-600"
+            }
+          >
+            {isTypingOrDeleting && (
+              <TypewriterText
+                text={line}
+                isDeleting={isDeleting}
+                onComplete={handleLineComplete}
+                typingDuration={0.75}
+              />
+            )}
 
-              {index === 2 && (
-                <AnimatePresence>
-                  {displayedLines.includes(lines[2]) && currentLine !== 2 && (
-                    <motion.div
-                      initial={{ opacity: 0, scaleX: 0 }}
-                      animate={{ opacity: 1, scaleX: 1 }}
-                      exit={{ opacity: 0, scaleX: 0 }}
-                      transition={{ duration: 0.5 }}
-                      className="w-full border-t border-gray-400 my-4 origin-left"
-                    />
-                  )}
-                </AnimatePresence>
-              )}
-            </div>
-          );
-        })
-      )}
+            {isPlainText && (
+              <span>
+                {line}
+                {index === lines.length - 1 && isComplete && !isDeleting && (
+                  <CursorBlinker />
+                )}
+              </span>
+            )}
+
+            {index === 2 && (
+              <AnimatePresence>
+                {displayedLines.includes(lines[2]) && currentLine !== 2 && (
+                  <motion.div
+                    initial={{ opacity: 0, scaleX: 0 }}
+                    animate={{ opacity: 1, scaleX: 1 }}
+                    exit={{ opacity: 0, scaleX: 0 }}
+                    transition={{ duration: 0.5 }}
+                    className="w-full border-t border-gray-400 my-4 origin-left"
+                  />
+                )}
+              </AnimatePresence>
+            )}
+          </div>
+        );
+      })}
     </div>
   );
 }
