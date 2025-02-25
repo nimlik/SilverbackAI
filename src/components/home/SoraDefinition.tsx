@@ -1,7 +1,7 @@
 "use client";
 
 import { motion, AnimatePresence } from "framer-motion";
-import { useEffect, useState, useMemo } from "react";
+import { useEffect, useState, useMemo, useRef } from "react"; // CHANGED: Added useRef
 import TypewriterText from "../TypewriterText";
 import CursorBlinker from "../CursorBlinker";
 
@@ -27,6 +27,7 @@ export default function SoraDefinition({
   const [currentLine, setCurrentLine] = useState(0);
   const [displayedLines, setDisplayedLines] = useState<string[]>([]);
   const [isComplete, setIsComplete] = useState(false);
+  const startedAnimation = useRef(false); // NEW: Added this line
 
   const lines = useMemo(
     () => [
@@ -37,13 +38,23 @@ export default function SoraDefinition({
     []
   );
 
+  // NEW: Added this whole section
+  useEffect(() => {
+    if (backgroundLoaded && !startedAnimation.current) {
+      setCurrentLine(0);
+      setDisplayedLines([]);
+      setIsComplete(false);
+      startedAnimation.current = true;
+    }
+  }, [backgroundLoaded]);
+
   useEffect(() => {
     if (isDeleting && backgroundLoaded) {
       setDisplayedLines(lines);
       setCurrentLine(lines.length - 1);
       setIsComplete(false);
     }
-  }, [isDeleting, lines, backgroundLoaded]); // Add backgroundLoaded as dependency
+  }, [isDeleting, lines, backgroundLoaded]);
 
   useEffect(() => {
     if (isComplete && displayedLines.length === 0) {
@@ -55,25 +66,28 @@ export default function SoraDefinition({
     if (isDeleting) {
       setTimeout(() => {
         setDisplayedLines((prev) => prev.filter((_, i) => i !== currentLine));
-        if (currentLine > 0) {
-          setCurrentLine((prev) => prev - 1);
-        } else {
-          setIsComplete(true);
-        }
+        currentLine > 0 ? setCurrentLine((prev) => prev - 1) : setIsComplete(true);
       }, 100);
     } else {
       setDisplayedLines((prev) => [...prev, lines[currentLine]]);
-      if (currentLine < lines.length - 1) {
-        setCurrentLine((prev) => prev + 1);
-      } else {
-        setIsComplete(true);
-      }
+      currentLine < lines.length - 1 ? setCurrentLine((prev) => prev + 1) : setIsComplete(true);
     }
   };
 
   return (
     <div className="space-y-2">
       <BackgroundLoader onLoaded={() => setBackgroundLoaded(true)} />
+      
+      {/* NEW: Add this hidden image container */}
+      <div 
+        style={{ 
+          backgroundImage: `url(/bg.png)`,
+          position: 'absolute',
+          width: '1px',
+          height: '1px',
+          overflow: 'hidden'
+        }}
+      />
 
       {backgroundLoaded && lines.map((line, index) => {
         const isPlainText =
