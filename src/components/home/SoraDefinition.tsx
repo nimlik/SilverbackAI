@@ -5,14 +5,12 @@ import { useEffect, useState, useMemo } from "react";
 import TypewriterText from "../TypewriterText";
 import CursorBlinker from "../CursorBlinker";
 
-// This component preloads your background image.
-// It calls onLoaded() when the image successfully loads or errors.
 function BackgroundLoader({ onLoaded }: { onLoaded: () => void }) {
   useEffect(() => {
     const img = new Image();
-    img.src = "/path/to/your/background.jpg"; // Make sure this path is correct!
+    img.src = "/bg.png"; 
     img.onload = onLoaded;
-    img.onerror = onLoaded; // Proceed even if there's an error
+    img.onerror = onLoaded;
   }, [onLoaded]);
 
   return null;
@@ -39,7 +37,6 @@ export default function SoraDefinition({
     []
   );
 
-  // Reset typewriter state if we are deleting text.
   useEffect(() => {
     if (isDeleting) {
       setDisplayedLines(lines);
@@ -48,7 +45,6 @@ export default function SoraDefinition({
     }
   }, [isDeleting, lines]);
 
-  // Once deletion is complete, call onComplete.
   useEffect(() => {
     if (isComplete && displayedLines.length === 0) {
       onComplete();
@@ -57,7 +53,6 @@ export default function SoraDefinition({
 
   const handleLineComplete = () => {
     if (isDeleting) {
-      // Delay the state update to let the deletion animation finish smoothly.
       setTimeout(() => {
         setDisplayedLines((prev) => prev.filter((_, i) => i !== currentLine));
         if (currentLine > 0) {
@@ -65,7 +60,7 @@ export default function SoraDefinition({
         } else {
           setIsComplete(true);
         }
-      }, 100); // Adjust this delay (in ms) to suit your animation timing.
+      }, 100);
     } else {
       setDisplayedLines((prev) => [...prev, lines[currentLine]]);
       if (currentLine < lines.length - 1) {
@@ -78,65 +73,65 @@ export default function SoraDefinition({
 
   return (
     <div className="space-y-2">
-      {/* Preload the background image */}
       <BackgroundLoader onLoaded={() => setBackgroundLoaded(true)} />
+      
+      {!backgroundLoaded ? (
+        // Show loading indicator while background loads
+        <div className="text-gray-500">Loading...</div>
+      ) : (
+        lines.map((line, index) => {
+          const isPlainText =
+            displayedLines.includes(line) &&
+            (!isDeleting || index !== currentLine);
 
-      {/* Display a loading message until the background is loaded */}
-      {!backgroundLoaded}
+          const isTypingOrDeleting = index === currentLine && !isComplete;
 
-      {/* Only render the typewriter text once the background has loaded */}
-      {backgroundLoaded && lines.map((line, index) => {
-        const isPlainText =
-          displayedLines.includes(line) &&
-          (!isDeleting || index !== currentLine);
+          return (
+            <div
+              key={line}
+              className={
+                index === 0 || index === 1
+                  ? "text-2xl font-medium"
+                  : index === 2
+                  ? "text-sm text-gray-700"
+                  : "text-sm text-gray-600"
+              }
+            >
+              {isTypingOrDeleting && (
+                <TypewriterText
+                  text={line}
+                  isDeleting={isDeleting}
+                  onComplete={handleLineComplete}
+                  typingDuration={0.75}
+                />
+              )}
 
-        const isTypingOrDeleting = index === currentLine && !isComplete;
+              {isPlainText && (
+                <span>
+                  {line}
+                  {index === lines.length - 1 && isComplete && !isDeleting && (
+                    <CursorBlinker />
+                  )}
+                </span>
+              )}
 
-        return (
-          <div
-            key={line}
-            className={
-              index === 0 || index === 1
-                ? "text-2xl font-medium"
-                : index === 2
-                ? "text-sm text-gray-700"
-                : "text-sm text-gray-600"
-            }
-          >
-            {isTypingOrDeleting && (
-              <TypewriterText
-                text={line}
-                isDeleting={isDeleting}
-                onComplete={handleLineComplete}
-                typingDuration={0.75}
-              />
-            )}
-
-            {isPlainText && (
-              <span>
-                {line}
-                {index === lines.length - 1 && isComplete && !isDeleting && (
-                  <CursorBlinker />
-                )}
-              </span>
-            )}
-
-            {index === 2 && (
-              <AnimatePresence>
-                {displayedLines.includes(lines[2]) && currentLine !== 2 && (
-                  <motion.div
-                    initial={{ opacity: 0, scaleX: 0 }}
-                    animate={{ opacity: 1, scaleX: 1 }}
-                    exit={{ opacity: 0, scaleX: 0 }}
-                    transition={{ duration: 0.5 }}
-                    className="w-full border-t border-gray-400 my-4 origin-left"
-                  />
-                )}
-              </AnimatePresence>
-            )}
-          </div>
-        );
-      })}
+              {index === 2 && (
+                <AnimatePresence>
+                  {displayedLines.includes(lines[2]) && currentLine !== 2 && (
+                    <motion.div
+                      initial={{ opacity: 0, scaleX: 0 }}
+                      animate={{ opacity: 1, scaleX: 1 }}
+                      exit={{ opacity: 0, scaleX: 0 }}
+                      transition={{ duration: 0.5 }}
+                      className="w-full border-t border-gray-400 my-4 origin-left"
+                    />
+                  )}
+                </AnimatePresence>
+              )}
+            </div>
+          );
+        })
+      )}
     </div>
   );
 }
