@@ -11,11 +11,10 @@ export default function SoraLabsDefinition() {
     "1. web3 'artificial market intelligence'",
     "2. eliza os + solana + social media",
     "3. autonomous crypto due diligence",
-    "4. autonomous bots on x, telegram and discord",
+    "4. 24-7 engagement on x, telegram and discord",
     "5. ai wallet custody with autonomous investing",
     "6. autonomous trading + augmented research for stakers",
-    "7. king of the crypto jungle",
-    "8. get your alpha from the alpha.",
+    "7. get your alpha from the alpha.",
   ];
 
   const handleLineComplete = () => {

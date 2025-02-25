@@ -82,7 +82,7 @@ export default function SoraDefinition({
       <BackgroundLoader onLoaded={() => setBackgroundLoaded(true)} />
 
       {/* Display a loading message until the background is loaded */}
-      {!backgroundLoaded && <p>Loading background...</p>}
+      {!backgroundLoaded}
 
       {/* Only render the typewriter text once the background has loaded */}
       {backgroundLoaded && lines.map((line, index) => {
