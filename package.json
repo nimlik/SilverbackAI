@@ -2,14 +2,13 @@
   "name": "silverback-ai",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://nimlik.github.io/SilverbackAI/",
-
+  "homepage": "https://silverbackai.io",
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "next build && cp public/CNAME out/ && touch out/.nojekyll",
+    "deploy": "gh-pages -d out --dotfiles",
     "start": "next start",
-    "lint": "next lint",
-    "deploy": "gh-pages -d build"
+    "lint": "next lint"
   },
   "dependencies": {
     "critters": "^0.0.25",

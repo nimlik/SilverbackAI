@@ -5,46 +5,91 @@ import { RoadmapItem } from "@/types/roadmap";
 
 const roadmapData: RoadmapItem[] = [
   {
-    id: "zen-1",
-    title: "Zen Framework",
-    description: "Initial release of the Zen Framework.",
-    quarter: "Q1",
-    year: 2025,
-    status: "completed",
-  },
-  {
-    id: "toolkit-1",
-    title: "Toolkit",
-    description: "Release of the Toolkit framework.",
-    quarter: "Q1",
-    year: 2025,
-    status: "completed",
-  },
-  {
-    id: "solana-toolkit-1",
-    title: "Solana Toolkit Release",
-    description: "Full release of Solana-specific AI tools and integrations.",
-    quarter: "Q1",
-    year: 2025,
-    status: "completed",
-  },
-  {
-    id: "hana-1",
-    title: "Hana Launch",
-    description:
-      "Launch of Hana, our AI Twitter agent powered by Zen and Toolkit.",
+    id: "scope-analysis-assessment",
+    title: "MVP Scope, Technical Analysis & Risk Assessment",
+    description: "Define MVP versus long-term features; Develop analysis models with VC partner; Analyse API integrations, Solana staking protocols and governance tools; Refine risk metrics and composite scoring.",
     quarter: "Q1",
     year: 2025,
     status: "in-progress",
   },
   {
-    id: "consumer-product-1",
-    title: "Consumer Product Release",
+    id: "prototyping",
+    title: "Prototyping",
+    description: "Map out key user flows for conversational interface and staking; Complete wireframes, and begin v1 of UI & UX.",
+    quarter: "Q1",
+    year: 2025,
+    status: "in-progress",
+  },
+  {
+    id: "architecture",
+    title: "Architecture",
+    description: "Finalise cognitive blueprint; Document interfaces between sub-agents and external systems.",
+    quarter: "Q1",
+    year: 2025,
+    status: "in-progress",
+  },
+  {
+    id: "infra-design",
+    title: "Infrastructure Design",
     description:
-      "Consumer facing product release; product will be voted on by the community.",
+      "Architect the auto-scaling, containerised infrastructure; Design an audit logging mechanism.",
+    quarter: "Q1",
+    year: 2025,
+    status: "in-progress",
+  },
+  {
+    id: "staking-design",
+    title: "Staking & Tiered Access",
+    description:
+      "Finalise the dynamic USD value system, wallet limit calculations, and reflection reward mechanism; Define metrics and user benefits for MVP and future premium tiers. Leverage Solana protocols to implement staking, dynamic trading wallet limits, and the reflection reward mechanism.",
+    quarter: "Q1",
+    year: 2025,
+    status: "in-progress",
+  },
+  {
+    id: "mvp-dev",
+    title: "MVP Development",
+    description:
+      "Build aggregation layer to fetch, validate, and normalise data for MVP APIs; Develop Brain STEM, Temporal and Parietal sub-agents for detailed analysis; Code the aggregation module that consolidates insights. Integrate a basic user interface for staking, token management, and tier access.",
     quarter: "Q2",
     year: 2025,
-    status: "planned",
+    status: "in-progress",
+  },
+  {
+    id: "testing",
+    title: "Testing, Validation & Iteration",
+    description:
+      "Validate each LLM module individually, end-to-end Testing; Stress-test cloud infrastructure for auto-scaling and high availability; penetration tests and smart contract audits.",
+    quarter: "Q2",
+    year: 2025,
+    status: "in-progress",
+  },
+  {
+  id: "uat",
+    title: "Governance & UAT",
+    description:
+      "Gather user feedback on chatbot UI and analyses; Test the process for external community votes.",
+    quarter: "Q2",
+    year: 2025,
+    status: "in-progress",
+  },
+  {
+    id: "mvp-deployment",
+    title: "MVP Deployment & Scaling",
+    description:
+      "Launch the containerised MVP on a cloud-native platform with auto-scaling capabilities; Activate audit logging systems and monitoring dashboards; Roll out the staking mechanism; Publish internal docs for system architecture, API integrations, and operational procedures.",
+    quarter: "Q2",
+    year: 2025,
+    status: "in-progress",
+  },
+  {
+    id: "autonomous-investing",
+    title: "Autonomous Investing ",
+    description:
+      "Develop algorithms for autonomous investments. Build monitoring tools for tracking investment performance with feedback loop provided by DMN LLM.",
+    quarter: "Q3",
+    year: 2025,
+    status: "in-progress",
   },
 ];
 
@@ -54,16 +99,16 @@ const statusColors = {
   planned: "bg-gray-400",
 };
 
-const legendItems = [
+/*const legendItems = [
   { status: "completed" as const, label: "Completed" },
   { status: "in-progress" as const, label: "In Progress" },
   { status: "planned" as const, label: "Planned" },
-];
+];*/
 
 export default function Roadmap() {
   return (
     <div className="relative mx-auto">
-      <motion.div
+      {/*<motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         className="flex flex-col items-center gap-4 mb-12"
@@ -80,7 +125,7 @@ export default function Roadmap() {
             </div>
           ))}
         </div>
-      </motion.div>
+      </motion.div>*/}
 
       <div className="absolute left-4 md:left-1/2 top-12 bottom-0 w-[2px] bg-sora-accent" />
 
