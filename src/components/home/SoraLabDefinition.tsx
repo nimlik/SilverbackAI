@@ -14,7 +14,7 @@ export default function SoraLabsDefinition() {
     "4. autonomous bots on x, telegram and discord",
     "5. ai wallet custody with autonomous investing",
     "6. autonomous trading + augmented research for stakers",
-    "7. wise and humorous on social media",
+    "7. king of the crypto jungle",
     "8. get your alpha from the alpha.",
   ];
 

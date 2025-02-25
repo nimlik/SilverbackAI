@@ -38,12 +38,15 @@ export default function SoraDefinition({
 
   const handleLineComplete = () => {
     if (isDeleting) {
-      setDisplayedLines((prev) => prev.filter((_, i) => i !== currentLine));
-      if (currentLine > 0) {
-        setCurrentLine((prev) => prev - 1);
-      } else {
-        setIsComplete(true);
-      }
+      // Delay the state update to let the deletion animation finish smoothly.
+      setTimeout(() => {
+        setDisplayedLines((prev) => prev.filter((_, i) => i !== currentLine));
+        if (currentLine > 0) {
+          setCurrentLine((prev) => prev - 1);
+        } else {
+          setIsComplete(true);
+        }
+      }, 100); // Adjust this delay (in ms) to suit your animation timing.
     } else {
       setDisplayedLines((prev) => [...prev, lines[currentLine]]);
       if (currentLine < lines.length - 1) {
@@ -53,6 +56,7 @@ export default function SoraDefinition({
       }
     }
   };
+  
 
   return (
     <div className="space-y-2">

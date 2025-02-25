@@ -5,7 +5,7 @@ import Footer from "@/components/layout/Footer";
 import { sfProDisplay } from "@/lib/fonts";
 
 export const metadata: Metadata = {
-  title: "sora labs",
+  title: "silverback ai",
   description: "where the sky is just the beginning.",
   icons: {
     icon: [
