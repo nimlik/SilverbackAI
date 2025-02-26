@@ -155,7 +155,7 @@ export default function WhitepaperContent() {
     "-- Tokenomics",
     "-- Liquidity, Market Capitalisation, TVL",
     "-- Token Velocity, Vesting Schedules, Emission Rates, Token Utility",
-    "-- May undertake financial modelling and forecasting",
+    "-- Financial modelling and forecasting",
     
     "* Technology LLM analyses:",
     "-- Openness",
