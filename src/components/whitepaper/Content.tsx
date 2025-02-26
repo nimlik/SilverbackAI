@@ -127,7 +127,7 @@ export default function WhitepaperContent() {
     "- Governance integration for incorporating external community and strategic inputs.",
     "- A scalable, cloud-native infrastructure designed for auto-scaling and future expansion.",
 
-    "## 3. Target Market",
+    "## 3. Audience",
     "Crypto natives, noobs who want to learn, degens, venture analysts, venture scouts, sophisticated investors, anyone seeking cutting-edge insights, users wanting to deep dive.",
 
     "## 4. Ideal Partnerships",
