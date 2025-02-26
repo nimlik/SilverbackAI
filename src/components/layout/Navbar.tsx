@@ -41,7 +41,7 @@ export default function Navbar() {
 <nav className="max-w-7xl mx-auto px-4 h-14 flex items-center justify-between">
         <Link
           href="/"
-          className="font-bold text-lg text-white transition-colors flex items-center"
+          className="font-bold text-lg text-gray-700 transition-colors flex items-center"
         >
           
           silverback ai 

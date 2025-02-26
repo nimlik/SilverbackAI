@@ -66,13 +66,21 @@ export default function SoraDefinition({
     if (isDeleting) {
       setTimeout(() => {
         setDisplayedLines((prev) => prev.filter((_, i) => i !== currentLine));
-        currentLine > 0 ? setCurrentLine((prev) => prev - 1) : setIsComplete(true);
+        if (currentLine > 0) {
+          setCurrentLine((prev) => prev - 1);
+        } else {
+          setIsComplete(true);
+        }
       }, 100);
     } else {
       setDisplayedLines((prev) => [...prev, lines[currentLine]]);
-      currentLine < lines.length - 1 ? setCurrentLine((prev) => prev + 1) : setIsComplete(true);
+      if (currentLine < lines.length - 1) {
+        setCurrentLine((prev) => prev + 1);
+      } else {
+        setIsComplete(true);
+      }
     }
-  };
+  }
 
   return (
     <div className="space-y-2">

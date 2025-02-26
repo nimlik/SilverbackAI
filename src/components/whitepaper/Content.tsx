@@ -105,7 +105,7 @@ export default function WhitepaperContent() {
     "## Table of Contents",
     "1. Introduction",
     "2. System Overview & Architectural Components",
-    "3. Target Market",
+    "3. Audience",
     "4. Ideal Partnerships",
     "5. Cognitive Architecture",
     "6. Analyses & Conversational Interface",
