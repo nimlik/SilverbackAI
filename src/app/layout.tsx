@@ -6,7 +6,7 @@ import { sfProDisplay } from "@/lib/fonts";
 
 export const metadata: Metadata = {
   title: "silverback ai",
-  description: "where the sky is just the beginning.",
+  description: "web3 artificial marketing intelligence. get your alpha from the alpha.",
   icons: {
     icon: [
       { url: "/favicon.ico" },

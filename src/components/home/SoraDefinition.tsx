@@ -8,7 +8,7 @@ import CursorBlinker from "../CursorBlinker";
 function BackgroundLoader({ onLoaded }: { onLoaded: () => void }) {
   useEffect(() => {
     const img = new Image();
-    img.src = "/bg.png";
+    img.src = "/bg.webp";
     img.onload = onLoaded;
     img.onerror = onLoaded;
   }, [onLoaded]);
@@ -81,7 +81,7 @@ export default function SoraDefinition({
       {/* NEW: Add this hidden image container */}
       <div 
         style={{ 
-          backgroundImage: `url(/bg.png)`,
+          backgroundImage: `url(/bg.webp)`,
           position: 'absolute',
           width: '1px',
           height: '1px',
