@@ -43,7 +43,7 @@ function renderLine(line: string, key: number) {
   // Double-dash bullet
   if (trimmed.startsWith("-- ")) {
     return (
-      <ul key={key} className="list-square ml-8 text-gray-700">
+      <ul key={key} className="list-disc ml-8 text-gray-700">
         <li>{trimmed.slice(3)}</li>
       </ul>
     );
