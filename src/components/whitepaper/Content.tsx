@@ -217,8 +217,8 @@ export default function WhitepaperContent() {
     
     "## 6. Analyses & Conversational Interface",
     "* Pre-analysed projects:",
-    "- -A report is presented as static information to minimise computational overhead.",
-    "--Project information is updated weekly - users can see 'this project was updated n days ago'.",
+    "-- A report is presented as static information to minimise computational overhead.",
+    "-- Project information is updated weekly - users can see 'this project was updated n days ago'.",
     "* Not yet analysed:",
     "-- User must provide CA and website.",
     "-- Silverback then conducts its analysis and provides a detailed report within ~30 mins.",
