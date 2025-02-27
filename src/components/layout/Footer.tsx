@@ -3,34 +3,13 @@ export default function Footer() {
     <footer className="fixed bottom-0 w-full backdrop-blur-md bg-transparent">
       <div className="max-w-7xl mx-auto px-4 h-14 flex items-center justify-between text-sm">
         <div className="text-white bold text-sm">© 2025 silverback ai</div>
-        <div className="flex gap-6 text-sm">
+        <div className="text-white bold text-sm align-right">contact@silverbackai.io</div> 
           {/*<a
             href="/privacy"
             className="text-white hover:text-sora-primary transition-colors"
           >
             privacy
-          </a>
-          <a
-            href="/terms"
-            className="text-white hover:text-sora-secondary transition-colors"
-          >
-            terms
-          </a> 
-          { /*<a
-            href="https://x.com/labs_sora"
-            target="_blank"
-            className="text-white hover:text-sora-secondary transition-colors"
-          >
-            x
-          </a> 
-          <a
-            href="https://discord.gg/soralabs"
-            target="_blank"
-            className="text-white hover:text-sora-secondary transition-colors"
-          >
-            discord
-          </a> */}
-        </div>
+          </a>*/}
       </div>
     </footer>
   );

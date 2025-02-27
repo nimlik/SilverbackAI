@@ -70,6 +70,26 @@ function renderLine(line: string, key: number) {
   }
 
   // Check if the line includes the hyperlink text and replace it with an <a> element
+  const hyperlinkText2 = "hierarchical brain";
+  if (line.includes(hyperlinkText2)) {
+    const parts = line.split(hyperlinkText2);
+    return (
+      <div key={key} className="text-gray-700">
+        {parts[0]}
+        <a
+          href="/cogmap.png"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-blue-600 underline"
+        >
+          {hyperlinkText2}
+        </a>
+        {parts[1]}
+      </div>
+    );
+  }
+
+  // Check if the line includes the hyperlink text and replace it with an <a> element
   const hyperlinkText = "View the cognitive architecture here";
   if (line.includes(hyperlinkText)) {
     const parts = line.split(hyperlinkText);
@@ -89,6 +109,7 @@ function renderLine(line: string, key: number) {
     );
   }
 
+ 
   // For any other line, render it as a simple div
   return (
     <div key={key} className="text-gray-700">
@@ -113,10 +134,10 @@ export default function WhitepaperContent() {
     "8. Logging, Scalability & Future-Proofing",
     "9. Staking Mechanism & Tiered Access System Design",
     "10. Future Enhancements & Expansion",
-    "11. Next Steps & Open Items",
+    "11. Next Steps",
 
     "## 1. Introduction",
-    "This document outlines the architecture for an autonomous, AI-driven web3 market intelligence platform. Leveraging LLMs, real-time data aggregation, Solana, and Eliza OS, the platform delivers powerful market insights and executes strategic investments autonomously all while engaging users 24/7 on social media.",
+    "This document outlines the architecture for an autonomous, AI-driven web3 market intelligence platform. Leveraging LLMs, real-time data aggregation, Solana, and Eliza OS, the platform delivers powerful market insights and executes strategic investments autonomously, all while engaging users 24/7 on social media.",
 
     "## 2. System Overview & Architectural Components",
     "Key highlights include:",
@@ -126,51 +147,51 @@ export default function WhitepaperContent() {
     "- An autonomous investing module that executes and tracks investments.",
     "- Governance integration for incorporating external community and strategic inputs.",
     "- A scalable, cloud-native infrastructure designed for auto-scaling and future expansion.",
+    "- Leverages Solana’s high-speed blockchain for secure, low-latency transactions, ensuring real-time execution, cost efficiency, and seamless interoperability with on-chain data sources.",
 
     "## 3. Audience",
-    "Crypto natives, noobs who want to learn, degens, venture analysts, venture scouts, sophisticated investors, anyone seeking cutting-edge insights, users wanting to deep dive.",
+    "Crypto natives, degens, noobs, venture analysts, venture scouts, sophisticated investors, anyone seeking cutting-edge insights, users wanting to deep dive.",
 
-    "## 4. Ideal Partnerships",
+    "## 4. Ideal Partners",
     "2048 VC, a16z crypto, Afore Capital, Coinbase Ventures, Defiance Capital, First Star, Foundation Capital, Future Perfect Ventures, Generalist Capital, Kaizen DAO, Outlier Ventures, Paradigm, Pareto, Propel Venture Partners, Seedclub, Solana Foundation, South Park Commons, Spartan Labs, Superportal, Tribe Capital",
 
     "## 5. Cognitive Architecture",
-    "The cognitive architecture is structured across five layers (Frontal Lobe, Parietal Lobe, Temporal Lobe, Brain STEM, Qualia Layer), each contributing to a comprehensive analysis and decision-making process. View the cognitive architecture here. A description of each is below:",
+    "The cognitive architecture is structured across six layers (API Data, Topic Analysts, Domain Analysts, Senior Analysts, Chief Analyst, Executive LLMs), each contributing to a comprehensive analysis and decision-making process. View the cognitive architecture here. A description of each is below:",
     
-    "### 5.1. Qualia Layer",
-    "- The lowest level.",
+    "### 5.1. API Data",
     "- Standardises and normalises API data.",
     "- Triggers validation checks to ensure data integrity (e.g. date formats, timestamps, currency units).",
     "- Flags missing or anomalous data for secondary validation.",
     
-    "### 5.2. Brain STEM",
+    "### 5.2. Topic Analysts",
     "- The most granular level of LLMs analyses and summarises API data (eg social metrics) and information (eg. whitepaper). Each LLM in this layer is highly specialised.",
-    "- Provides analysis with scores and qualitative assessment to domain-specific Temporal Lobe LLMs.",
+    "- Provides analysis with scores and qualitative assessment to Domain Analysts.",
     
-    "### 5.3. Temporal Lobe",
-    "- Consists of five LLMs: Finance, Technology, Idea, Community, Innovation & Risk", 
-    "- Each LLM analyses and summarises domain-specific information provided by multiple Brain STEM LLMs to form a cohesive analysis in its specialised domain (eg finance or technology).",
+    "### 5.3. Domain Analysts",
+    "- Consists of four LLMs: Finance, Technology, Core, Community", 
+    "- Each LLM analyses and summarises domain-specific information provided by multiple Topic Analysts to form a cohesive position in a specialised domain (eg finance or technology) for a web3 project.",
         
-    "* Finance LLM analyses:",
+    "* Finance:",
     "-- Price",
     "-- Tokenomics",
     "-- Liquidity, Market Capitalisation, TVL",
     "-- Token Velocity, Vesting Schedules, Emission Rates, Token Utility",
     "-- Financial modelling and forecasting",
     
-    "* Technology LLM analyses:",
+    "* Technology:",
     "-- Openness",
     "-- Security",
     "-- Decentralisation",
     "-- Scalability (throughput, interoperability, transaction costs)",
     
-    "* Idea LLM analyses:",
+    "* Core:",
     "-- Whitepaper",
     "-- Website",
     "-- Documentation",
     "-- Team",
     "-- Roadmap",
     
-    "* Community LLM analyses:",
+    "* Community:",
     "-- Socials (sentiment and volume)",
     "-- KOL engagement",
     "-- Developer engagement/activity",
@@ -179,33 +200,35 @@ export default function WhitepaperContent() {
     "-- Ecosystem & adoption",
     "-- Partnerships",
     
-    "* Innovation & Risk LLM analyses:",
-    "-- Legal and regulatory risks",
-    "-- USP and project originality",
-    "-- Ecosystem fit",
-    
-   "### 5.4. Parietal Lobe",
-    "- A single LLM that analyses and synthesises all evaulated data from Temporal Lobe LLMs",
-    "- Consolidates domain-specific analyses into an aggregated summary.",
-    "- Forms a cohesive analysis and position on a web3 project in its entirety.",
-    "- Conducts SWOT analysis.",
-    "- Serves as the bridge between granular data and strategic execution.",
-    
-   "### 5.5. Frontal Lobe",
+    "### 5.4 Senior Analysts",
+    "- Consolidate domain-specific analyses into an aggregated summary of a web3 project",
+    "- Conducts SWOT analyses",
+    "- Considers legal/regulatory risk, USP, project originality, ecosystem fit etc",
+    "- Forms a cohesive position on web3 projects in their entirety",
+    "- Makes recommendations and highlights potential problems to Chief Analyst",
+		"- Long-term, the objective is to have dozens of Senior Analysts built on a diversity of LLMs (ie OpenAI, Anthropic, Deepseek) reporting to the Chief Analyst",
+   
+    "### 5.5. Chief Analyst",
+    "- Recieves and analyses reports from multiple Senior Analysts about each web3 project",
+    "- Looks for discrepancies of opinion between Senior Analysts on each project and investigates why",  
+		"- Forms a meta-opinion/position on each web3 project based on the recommendations of 3+ Senior Analysts",
+    "- Serves as the bridge between granular data and strategic execution",
+		        
+   "### 5.6. Executive LLMs",
     "_ Consists of three LLM modules that each carry out specific high-level functions.",
     
-    "* Executive LLM:",
-    "-- Monitors and grades web3 projects over time.",
-    "-- Endowed with a crypto wallet.",
-    "-- Executes autonomous investment strategies on behalf of itself and stakers that have put funds into their trading wallet.",
+    "* Investor:",
+    "-- Receives 'advice' about web3 projects from Chief Analyst, monitoring and grading web3 projects over time",
+    "-- Endowed with a crypto wallet",
+    "-- Executes autonomous investment strategies on behalf of itself and stakers that have put funds into their trading wallet",
     "-- Charges a 1% fee for all autonomous trades made on behalf of users",
     
-    "* Default Mode Network (DMN) LLM:",
-    "-- Responsible for reviewing investment strategies and the efficacy of other LLMs.",
-    "-- Provides advice and feedback to other LLMs.",
-    "-- Suggests creative and insightful investment ideas to the Executive LLM.",
+    "* Reviewer/Auditor:",
+    "-- Responsible for reviewing investment strategies and the efficacy of other LLMs",
+    "-- Provides recommendations and feedback to other LLMs",
+    "-- Suggests creative and insightful investment ideas to the Investor LLM",
     
-    "* Linguistic LLM:",
+    "* Comms:",
     "-- Responsible for communicating on social media.",
     "-- Provides wise and humorous 24/7 engagement on X, Telegram and Discord.",
     "-- Adjusts tone dynamically based on previous user interactions, ensuring a personalised experience.",
@@ -217,8 +240,9 @@ export default function WhitepaperContent() {
     
     "## 6. Analyses & Conversational Interface",
     "* Pre-analysed projects:",
-    "-- A report is presented as static information to minimise computational overhead.",
-    "-- Project information is updated weekly - users can see 'this project was updated n days ago'.",
+    "-- Most project information is updated weekly - users can see 'this project was updated n days ago'.",
+    "-- Social data (sentiment/volume) is updated hourly",
+		"-- When a user inquires about a web3 project, a report is presented as static information to minimise computational overhead.",
     "* Not yet analysed:",
     "-- User must provide CA and website.",
     "-- Silverback then conducts its analysis and provides a detailed report within ~30 mins.",
@@ -248,7 +272,7 @@ export default function WhitepaperContent() {
     "-- Access to a trading wallet with option to mirror autonomous trading of the AI agent.",
     "-- 15% of token sales redistributed weekly.",
     "* Future:",
-    "-- Premium tiers will be introduced unlocking advanced features, such as real-time notifications, upcoming airdrops, a market intelligence dashboard with historical data, trending projects etc.",
+    "-- Premium tiers will be introduced unlocking advanced features, such as real-time notifications, upcoming airdrops, a market intelligence dashboard, trending projects etc.",
     
     "### 9.2. Tier Threshold Metrics",
     "- Utilises a dynamic USD value system to determine the effective value of staked tokens.",
@@ -259,12 +283,12 @@ export default function WhitepaperContent() {
     "- If a user unstakes all tokens, they lose access to autonomous trading and market intelligence.",
     
     "## 10. Future Enhancements & Expansion",
-    "- Dashboard: will consolidate historical data, project analyses, performance trends, upcoming airdrops and more.",
+    "- Dashboard: consolidate historical data, project analyses, performance trends, upcoming airdrops and more.",
     "- Planned integration of further APIs (e.g. Glassnode, Nansen, Dune Analytics etc).",
     "- Expansion of sub-agent capabilities (e.g. compliance, regulatory oversight).",
     
-    "## 11. Next Steps & Open Items",
-    "- Technical Feasibility: Conduct detailed analysis of API integrations, the aggregation layer, and the staking mechanism.",
+    "## 11. Next Steps",
+    "- Technical Scope: Conduct detailed analysis of API integrations, the aggregation layer, and the staking mechanism.",
     "- Risk Model Refinement: Refine risk metrics and composite scoring with input from VC and technical stakeholders.",
     "- Governance Process: Define how external governance inputs will be ingested and implemented.",
     "- User Interface Planning: Begin prototyping for future dashboards and enhanced UI elements.",
