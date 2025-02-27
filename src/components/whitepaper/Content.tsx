@@ -288,8 +288,9 @@ export default function WhitepaperContent() {
     "- Expansion of sub-agent capabilities (e.g. compliance, regulatory oversight).",
     
     "## 11. Next Steps",
+    "- Partnership: with a web3 VC fund to implement project modelling, forecasting and raise capital.",
     "- Technical Scope: Conduct detailed analysis of API integrations, the aggregation layer, and the staking mechanism.",
-    "- Risk Model Refinement: Refine risk metrics and composite scoring with input from VC and technical stakeholders.",
+    "- Risk Model Refinement: With VC partner, implement and refine risk metrics and composite scoring and technical team.",
     "- Governance Process: Define how external governance inputs will be ingested and implemented.",
     "- User Interface Planning: Begin prototyping for future dashboards and enhanced UI elements.",
     "- Future-Proofing: Integrate hooks for reinforcement learning and autonomous adjustments as the platform scales.",
