@@ -240,9 +240,9 @@ export default function WhitepaperContent() {
     
     "## 6. Analyses & Conversational Interface",
     "* Pre-analysed projects:",
+    "-- When a user inquires about a web3 project, a report is presented as static information to minimise computational overhead.",
     "-- Most project information is updated weekly - users can see 'this project was updated n days ago'.",
     "-- Social data (sentiment/volume) is updated hourly",
-		"-- When a user inquires about a web3 project, a report is presented as static information to minimise computational overhead.",
     "* Not yet analysed:",
     "-- User must provide CA and website.",
     "-- Silverback then conducts its analysis and provides a detailed report within ~30 mins.",
